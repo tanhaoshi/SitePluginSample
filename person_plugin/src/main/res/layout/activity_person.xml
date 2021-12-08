@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_main"/>
+
+    <include layout="@layout/toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/projectLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/projectTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="所属项目"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/projectTextView"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    android:textIsSelectable="false"
+                    android:layout_width="@dimen/dp_150"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:hint="请选择所属项目"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:gravity="end|center"
+                    android:layout_marginEnd="@dimen/dp_6" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/companyLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/companTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="所属分包商"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/companyTextView"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    android:textSize="@dimen/sp_15"
+                    android:textIsSelectable="false"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请选择所属分包商"
+                    android:gravity="end|center"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/teamLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="班组"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/teamTextView"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    android:textSize="@dimen/sp_15"
+                    android:textIsSelectable="false"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请选择班组"
+                    android:gravity="end|center"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/workTypeLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="工种"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/workTypeTextView"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    android:textIsSelectable="false"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请选择工种"
+                    android:gravity="end|center"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/outlookLayout"
+                android:visibility="gone"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="政治面貌"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+<!--                <org.angmarch.views.NiceSpinner-->
+<!--                    android:id="@+id/outlookSpinner"-->
+<!--                    app:dropDownListPaddingBottom="@dimen/dp_20"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_width="@dimen/dp_144"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:ellipsize = "end"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    />-->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/outlookLine"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/educationLayout"
+                android:visibility="gone"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="文化程度"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+<!--                <org.angmarch.views.NiceSpinner-->
+<!--                    android:id="@+id/educatio
+nSpinner"-->
+<!--                    app:dropDownListPaddingBottom="@dimen/dp_20"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_width="@dimen/dp_144"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:ellipsize = "end"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    />-->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/educationLine"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/entranceDateLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="进场日期"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <EditText
+                    android:id="@+id/entranceDateTextView"
+                    android:layout_width="@dimen/dp_0"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:textIsSelectable="false"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="none"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请选择进场日期"
+                    android:gravity="end|center"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/preDateLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="预退场日期"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <TextView
+                    android:id="@+id/preDateTextView"
+                    android:layout_width="@dimen/dp_0"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:textIsSelectable="false"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="none"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请选择预退场日期"
+                    android:gravity="end|center"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/phoneLayout"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="手机号码"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <EditText
+                    android:id="@+id/phoneTextView"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textSize="@dimen/sp_15"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请输入正确的手机号码"
+                    android:gravity="end|center"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/teamView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="是否班组长"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <Space
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="安全教育是否合格"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <Space
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <RadioGroup
+                    android:id="@+id/educationRadioGroup"
+                    android:checkedButton="@id/educationRadio"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/educationRadio"
+                        android:text="合格"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/educationNoRadio"
+                        android:text="不合格"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </RadioButton>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="薪资核算方式"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <Space
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:checkedButton="@id/workHour"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/workHour"
+                        android:text="工时"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/workLoader"
+                        android:text="工量"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </RadioButton>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <LinearLayout
+                android:id="@+id/meterLayout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="计量单位"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/person_bul_color"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_20"
+                    android:text="*"/>
+
+                <EditText
+                    android:id="@+id/meterTextView"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:textIsSelectable="false"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_15"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColorHint="@color/person_black50_color"
+                    android:textColor="@color/black"
+                    android:hint="请选择计量单位"
+                    android:gravity="end|center"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_6"/>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/right_arrow"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/person_gray_color"/>
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:text="确认提交"
+                android:enabled="false"
+                android:background="@drawable/typing_selector"
+                android:textSize="@dimen/sp_20"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

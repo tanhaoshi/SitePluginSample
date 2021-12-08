@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorAccent"
+    app:contentInsetLeft="@dimen/dp_0"
+    app:contentInsetStart="@dimen/dp_0">
+<!--    ?attr/actionBarSize-->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/toorbar_back"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_17"
+        android:paddingRight="@dimen/dp_16"/>
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="标题"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/toolbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_17"/>
+
+</androidx.appcompat.widget.Toolbar>

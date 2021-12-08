@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <!--    <color name="colorAccent">#D81B60</color>-->
+    <color name="colorAccent">#479BFF</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="person_bul_color">#3498DB</color>
+
+    <color name="red">#FF0000</color>
+
+    <color name="black">#000000</color>
+
+    <color name="person_black50_color">#808080</color>
+
+    <color name="person_gray_color">#fff5f5f5</color>
+
+    <color name="color_cursor">#cccccc</color>
+
+</resources>
